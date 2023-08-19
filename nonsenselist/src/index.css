@@ -1,0 +1,15 @@
+
+
+:root{
+	--background-color: #D55C89;
+	--accent-one: #9DAB44;
+	--accent-two: #DF6934;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
