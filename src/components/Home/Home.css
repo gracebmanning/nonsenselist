@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question{
+    font-size: 30px;
+    color: white;
+}
+
+.searchBar{
+    background-color: white;
+    color: var(--accent-two);
+    padding: 10px;
+}
+
+.searchList{
+    display: none;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.searchList.expanded{
+    display: block;
+}

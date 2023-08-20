@@ -27,6 +27,12 @@
     font-size: 18px;
 }
 
+#taglineWord{
+    margin: 0px;
+    display: inline;
+    color: white;
+}
+
 .navList{
     margin: 2px 5px 5px 0px;
     width: 50%;
@@ -37,5 +43,13 @@
 }
 
 .navItem{
-    
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    transition: ease-out 0.2s;
+}
+
+.navItem:hover{
+    color: white;
+    transition: ease-in 0.2s;
 }
