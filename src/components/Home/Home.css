@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    margin-top: 150px;
 }
 
 .question{
@@ -10,18 +12,56 @@
     color: white;
 }
 
+.search{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 40%;
+}
+
 .searchBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+.searchInput{
     background-color: white;
     color: var(--accent-two);
+    border: white;
+    font-size: 18px;
+    width: 100%;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
-.searchList{
+.searchInput::placeholder{
+    color: var(--accent-two);
+}
+
+.searchIcon{
+    position: absolute;
+    font-size: 30px;
+    color: var(--accent-two);
+    padding-right: 10px;
+}
+
+.resultList{
+    margin: 0px;
+    padding: 0px;
+    padding-left: 10px;
     display: none;
     list-style: none;
-    padding-left: 0px;
+    color: white;
+    font-size: 18px;
 }
 
-.searchList.expanded{
+.resultList.expanded{
     display: block;
+}
+
+.resultLink{
+    text-decoration: underline;
+    color: white;
 }

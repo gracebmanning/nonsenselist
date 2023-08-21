@@ -1,5 +1,6 @@
 import './Home.css';
 import { useState } from 'react';
+import { HiSearch } from 'react-icons/hi';
 import topics from '../../topics';
 
 function getFilteredTopics(query){
@@ -15,11 +16,19 @@ export default function Home(){
 
     return(
         <div className='container'>
-            <h3 className='question'>Test</h3>
-            <input className='searchBar' type='text' placeholder='search...' onChange={e => setQuery(e.target.value)} />
-            <ul className={(query === '') ? 'searchList' : 'searchList expanded'}>
-                {filteredTopics.map(value => <h4 key={value}>{value}</h4>)}
-            </ul>
+            <h3 className='question'>what are you searching for?</h3>
+            <div className='search'>
+                <div className='searchBar'>
+                    <HiSearch className='searchIcon' />
+                    <input className='searchInput' type='text' placeholder='search...' onChange={e => setQuery(e.target.value)} />
+                </div>
+                <ul className={(query === '') ? 'resultList' : 'resultList expanded'}>
+                    {filteredTopics.map(value => 
+                        <li key={value}>
+                            <a className='resultLink' href={`topic/${value}`}>{value}</a>
+                        </li>)}
+                </ul>
+            </div>
         </div>
     );
 };
