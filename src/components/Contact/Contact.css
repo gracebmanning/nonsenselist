@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 60px;
+}
+
+.contactTitle{
+    font-size: 30px;
+    color: white;
+}
+
+.contactText{
+    width: 50%;
+    color: white;
+    text-align: center;
+}
+
+.contactText a{
+    color: white;
+    text-decoration: underline;
+    transition: ease-out 0.2s;
+}
+
+.contactText a:hover{
+    color: black;
+    transition: ease-in 0.2s;
+}
