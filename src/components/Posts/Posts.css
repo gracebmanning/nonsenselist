@@ -1,0 +1,60 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 60px;
+}
+
+.postsTitle{
+    font-size: 30px;
+    color: white;
+}
+
+.postsText{
+    width: 50%;
+    color: white;
+    text-align: center;
+}
+
+.postsText a{
+    color: white;
+    text-decoration: underline;
+    transition: ease-out 0.2s;
+}
+
+.postsText a:hover{
+    color: black;
+    transition: ease-in 0.2s;
+}
+
+.postsList{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.postsListItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.postPreviewImage{
+    width: 20%;
+}
+
+.postPreviewInfo{
+    text-align: left;
+    margin-left: 10px;
+}
+
+.postPreviewInfo h4 {
+    margin: 2px;
+}
+
+.postPreviewInfo h5{
+    margin: 2px;
+}

@@ -4,7 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
-import Articles from './components/Articles/Articles';
+import Posts from './components/Posts/Posts';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route path='/' element={<Home/>} />
         <Route path='about' element={<About/>} />
         <Route path='contact' element={<Contact/>} />
-        <Route path='all' element={<Articles/>} />
+        <Route path='posts' element={<Posts/>} />
       </Routes>
     </div>
   );

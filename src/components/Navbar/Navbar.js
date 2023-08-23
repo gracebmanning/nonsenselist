@@ -15,8 +15,8 @@ export default function Navbar(){
             </div>
             <ul className='navList'>
                 <li>
-                    <a className='navItem' href='all'>
-                        all topics
+                    <a className='navItem' href='posts'>
+                        all posts
                     </a>
                 </li>
                 <li>

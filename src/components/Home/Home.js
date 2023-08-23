@@ -1,13 +1,13 @@
 import './Home.css';
 import { useState } from 'react';
 import { HiSearch } from 'react-icons/hi';
-import topics from '../../topics';
+import { keywords } from '../../posts';
 
 function getFilteredTopics(query){
     if(!query){
-        return topics;
+        return keywords;
     }
-    return topics.filter(topic => topic.includes(query));
+    return keywords.filter(topic => topic.includes(query));
 }
 
 export default function Home(){
