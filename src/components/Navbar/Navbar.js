@@ -20,6 +20,11 @@ export default function Navbar(){
                     </a>
                 </li>
                 <li>
+                    <a className='navItem' href='/category'>
+                        browse by category
+                    </a>
+                </li>
+                <li>
                     <a className='navItem' href='/about'>
                         about
                     </a>

@@ -15,5 +15,6 @@ export const bananasPost = {
     body: articleBody,
     image: bananas,
     imageAlt: 'a bunch of yellow bananas',
-    keywords: ['bananas']
+    keywords: ['bananas'],
+    category: 'jobs'
 };

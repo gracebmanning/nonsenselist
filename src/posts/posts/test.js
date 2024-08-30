@@ -13,5 +13,6 @@ export const testPost = {
     body: articleBody,
     image: "none",
     imageAlt: 'a bunch of yellow bananas',
-    keywords: ['bananas']
+    keywords: ['bananas'],
+    category: 'for sale'
 };

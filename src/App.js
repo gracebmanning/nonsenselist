@@ -4,6 +4,8 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import AllPosts, { postRoutes } from './components/Posts/Posts';
+import Categories from './components/Categories/Categories';
+import { categoryRoutes } from './components/Categories/Categories';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path='/contact' element={<Contact/>} />
         <Route path='/post' element={<AllPosts/>} />
         {postRoutes}
+        <Route path='/category' element={<Categories/>} />
+        {categoryRoutes}
       </Routes>
     </div>
   );
