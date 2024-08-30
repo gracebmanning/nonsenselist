@@ -15,7 +15,7 @@ export default function Home(){
     const filteredTopics = getFilteredTopics(query);
 
     return(
-        <div className='container'>
+        <div className='homeContainer'>
             <h3 className='question'>what are you searching for?</h3>
             <div className='search'>
                 <div className='searchBar'>

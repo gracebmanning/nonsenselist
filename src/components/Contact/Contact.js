@@ -2,7 +2,7 @@ import './Contact.css';
 
 export default function Contact(){
     return(
-        <div className='container'>
+        <div className='contactContainer'>
             <h3 className='contactTitle'>contact nonsense list</h3>
             <div className='contactText'>
                 <p>
