@@ -1,4 +1,4 @@
-.container{
+.allPosts{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,43 +12,49 @@
     color: white;
 }
 
-.postsText{
-    width: 50%;
+.container{
     color: white;
-    text-align: center;
+    width: 60%;
+    margin: 10px 30px;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
 }
 
-.postsText a{
-    color: white;
-    text-decoration: underline;
+.postPreview{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--accent-two);
+    background-color: white;
+
+    width: 20%;
+    height: fit-content;
+
+    transform: scale(1.0);
     transition: ease-out 0.2s;
 }
 
-.postsText a:hover{
-    color: black;
+.postPreview:hover{
+    transform: scale(1.02);
     transition: ease-in 0.2s;
 }
 
-.postsList{
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-}
-
-.postsListItem{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 25px;
-}
-
 .postPreviewImage{
-    width: 20%;
+    width: 100px;
 }
 
 .postPreviewInfo{
-    text-align: left;
-    margin-left: 10px;
+   text-align: center;
+   padding: 5px;
+   width: 70%;
 }
 
 .postPreviewInfo h4 {

@@ -1,5 +1,5 @@
 import './Posts.css';
-import posts from '../../posts';
+import posts from '../../posts/index.js';
 
 function formatTitle(title){
     var result = title.replaceAll(' ', '-');
@@ -7,25 +7,43 @@ function formatTitle(title){
     return result;
 }
 
-export default function Posts(){
+function PostWithPreviewImage(post){
     return(
-        <div className='container'>
-            <h3 className='postsTitle'>about nonsense list</h3>
-            <div className='postsText'>
-                <ol className='postsList'>
-                    {posts.map(value => 
-                    <li className='postsListItem' key={value.title}>
-                        <img className='postPreviewImage' src={value.image} alt={value.imageAlt} />
-                        <div className='postPreviewInfo'>
-                            <a href={`posts/${formatTitle(value.title)}`}>
-                                <h4>{value.title}</h4>
-                            </a>
-                            <h5>by {value.author}</h5>
-                            <h5>{value.date}</h5>
-                            {value.body.substring(0, 100)}... READ MORE!
-                        </div>
-                    </li>)}
-                </ol>
+    <a className='postPreview' key={post.title} href={`post/${formatTitle(post.title)}`}>
+        <div className='postPreviewInfo'>
+            <h4>{post.title}</h4>
+            <h5>{post.date}</h5>
+            <h5>by {post.author}</h5>
+            {post.body.substring(0, 100)}... READ MORE!
+        </div>
+        <img className='postPreviewImage' src={post.image} alt={post.imageAlt} />
+    </a>
+)}
+
+function PostNoPreviewImage(post){
+    return(
+    <a className='postPreview' key={post.title} href={`post/${formatTitle(post.title)}`}>
+        <div className='postPreviewInfo'>
+            <h4>{post.title}</h4>
+            <h5>{post.date}</h5>
+            <h5>by {post.author}</h5>
+            {post.body.substring(0, 100)}... READ MORE!
+        </div>
+    </a>
+)}
+
+export default function AllPosts(){
+    return(
+        <div className='allPosts'>
+            <h3 className='postsTitle'>all posts</h3>
+            <div className='container'>
+                {posts.map(post => 
+                    {if(post.image === "none"){
+                        return PostNoPreviewImage(post)
+                    } else{
+                        return PostWithPreviewImage(post)
+                    }}
+                )}
             </div>
         </div>
     );

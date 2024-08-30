@@ -1,4 +1,4 @@
-import bananas from '../assets/images/bananas.jpg';
+import bananas from '../../assets/images/bananas.jpg';
 
 const articleBody = (
     `
@@ -8,12 +8,12 @@ const articleBody = (
     `
 );
 
-export const bananasPost = {
-    title: 'all about bananas',
+export const bananasPostTwo = {
+    title: 'all about bananas...again',
     author: 'grace',
     date: 'august 21, 2023',
     body: articleBody,
     image: bananas,
     imageAlt: 'a bunch of yellow bananas',
-    keywords: ['bananas']
+    keywords: ['yellow', 'monkeys']
 };

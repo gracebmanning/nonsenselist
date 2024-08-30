@@ -1,7 +1,8 @@
-import { bananasPost } from './bananas';
-import { bananasPostTwo } from './bananas2';
+import { bananasPost } from './posts/bananas';
+import { bananasPostTwo } from './posts/bananas2';
+import { testPost } from './posts/test';
 
-const posts = [ bananasPost, bananasPostTwo ];
+const posts = [ bananasPost, bananasPostTwo, testPost, testPost, testPost, testPost, testPost, testPost, testPost ];
 export default posts;
 
 function getKeywords(){

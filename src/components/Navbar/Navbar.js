@@ -15,17 +15,17 @@ export default function Navbar(){
             </div>
             <ul className='navList'>
                 <li>
-                    <a className='navItem' href='posts'>
-                        all posts
+                    <a className='navItem' href='/post'>
+                        posts
                     </a>
                 </li>
                 <li>
-                    <a className='navItem' href='about'>
+                    <a className='navItem' href='/about'>
                         about
                     </a>
                 </li>
                 <li>
-                    <a className='navItem' href='contact'>
+                    <a className='navItem' href='/contact'>
                         contact
                     </a>
                 </li>
