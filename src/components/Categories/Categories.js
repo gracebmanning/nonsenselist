@@ -4,6 +4,8 @@ import posts from '../../posts/index.js';
 import { PostGrid } from '../Posts/Posts';
 import { formatTextForPath } from '../utility';
 
+// jobs, housing, for sale, items wanted, services, community service, gigs, résumés, and discussion forums
+
 const categories = [];
 posts.forEach((post) => {
     if(!categories.includes(post.category)){
@@ -13,7 +15,7 @@ posts.forEach((post) => {
 function categoryPage(category){
     const filteredPosts = posts.filter((post) => post.category === category);
     return(
-        PostGrid(filteredPosts)
+        PostGrid(category, filteredPosts)
     );
 }
 

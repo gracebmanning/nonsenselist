@@ -4,8 +4,6 @@ import { Route } from 'react-router-dom';
 import { formatTextForPath } from '../utility';
 
 /** NEXT STEPS: 
- * 1) create categories (would require a categories component... treat like a tag in graces-blog)
- * jobs, housing, for sale, items wanted, services, community service, gigs, résumés, and discussion forums
  * 2) create authors (would require an authors component)
  * 3) polish up the keyword / search functionality
  */
@@ -67,10 +65,10 @@ export function PostPreview(post){
 }
 
 // ALL POSTS GRID
-export function PostGrid(postsList){
+export function PostGrid(title, postsList){
     return(
     <div className='allPosts'>
-        <h3 className='postsTitle'>all posts</h3>
+        <h3 className='postsTitle'>{title}</h3>
         <div className='postPreviewContainer'>
             {postsList.map(post => PostPreview(post))}
         </div>
@@ -80,6 +78,6 @@ export function PostGrid(postsList){
 
 export default function AllPosts(){
     return(
-        PostGrid(posts)
+        PostGrid("all posts", posts)
     );
 };

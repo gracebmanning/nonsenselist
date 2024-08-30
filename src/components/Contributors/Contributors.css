@@ -1,4 +1,4 @@
-.contactContainer{
+.contributorsContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,24 +7,24 @@
     margin-top: 60px;
 }
 
-.contactTitle{
+.contributorsTitle{
     font-size: 30px;
     color: white;
 }
 
-.contactText{
+.contributorsText{
     width: 50%;
     color: white;
     text-align: center;
 }
 
-.contactText a{
+.contributorsText a{
     color: white;
     text-decoration: underline;
     transition: ease-out 0.2s;
 }
 
-.contactText a:hover{
+.contributorsText a:hover{
     color: black;
     transition: ease-in 0.2s;
 }

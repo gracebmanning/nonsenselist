@@ -16,7 +16,7 @@ export default function Navbar(){
             <ul className='navList'>
                 <li>
                     <a className='navItem' href='/post'>
-                        posts
+                        all posts
                     </a>
                 </li>
                 <li>
@@ -25,13 +25,13 @@ export default function Navbar(){
                     </a>
                 </li>
                 <li>
-                    <a className='navItem' href='/about'>
-                        about
+                    <a className='navItem' href='/contributors'>
+                        contributors
                     </a>
                 </li>
                 <li>
-                    <a className='navItem' href='/contact'>
-                        contact
+                    <a className='navItem' href='/about'>
+                        about
                     </a>
                 </li>
             </ul>

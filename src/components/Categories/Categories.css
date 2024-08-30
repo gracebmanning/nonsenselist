@@ -6,3 +6,35 @@
     height: 100%;
     margin-top: 60px;
 }
+
+.categoriesTitle{
+    color: white;
+}
+
+.categoriesContainer a{
+    color: white;
+   
+    text-decoration: none;
+
+    
+}
+
+.categoriesContainer ul{
+    list-style-type: none;
+    font-size: 20px;
+    padding: 0px;
+    color: white;
+}
+
+.categoriesContainer li{
+    padding: 3px;
+    margin: 15px;
+    background-color: var(--accent-one);
+    transform: scale(1.0);
+    transition: ease-out 0.2s;
+}
+
+.categoriesContainer li:hover{
+    transform: scale(1.1);
+    transition: ease-in 0.2s;
+}
