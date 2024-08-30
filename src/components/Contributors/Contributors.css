@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100%;
     margin-top: 60px;
 }
 
@@ -12,19 +13,46 @@
     color: white;
 }
 
-.contributorsText{
-    width: 50%;
-    color: white;
-    text-align: center;
-}
-
-.contributorsText a{
+.contributorsContainer a{
     color: white;
     text-decoration: underline;
     transition: ease-out 0.2s;
 }
 
-.contributorsText a:hover{
+.contributorsContainer a:hover{
     color: black;
     transition: ease-in 0.2s;
+}
+
+.contributorTile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 60%;
+    background-color: white;
+    border-radius: 25px;
+    margin: 20px;
+
+    transform: scale(1.0);
+    transition: ease-out 0.2s;
+}
+
+.contributorTile:hover{
+    transform: scale(1.01);
+    transition: ease-in 0.2s;
+}
+
+.contributorName{
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+    margin: 15px;
+    background-color: var(--accent-one);
+    width: fit-content;
+}
+
+.contributorBio{
+    padding: 3px;
+    margin: 15px;
 }
