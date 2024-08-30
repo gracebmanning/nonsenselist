@@ -8,6 +8,12 @@ function formatTitle(title){
     return result;
 }
 
+/** NEXT STEPS: 
+ * 1) create categories (would require a categories component... treat like a tag in graces-blog)
+ * 2) create authors (would require an authors component)
+ * 3) polish up the keyword / search functionality
+ */
+
 
 // POST PAGE ELEMENT
 function Post(post){
