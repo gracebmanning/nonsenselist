@@ -1,6 +1,9 @@
-import { bananasPost } from './posts/bananas';
-import { bananasPostTwo } from './posts/bananas2';
-import { testPost } from './posts/test';
+import { lostshoe } from './posts/1lostshoe';
+import { cinnabonChainlink } from './posts/2cinnabon';
+import { windowCleaning } from './posts/3windowcleaning';
+import { spareThumb } from './posts/4sparethumb';
+import { eggGhost } from './posts/5eggghost';
 
-const posts = [ bananasPost, bananasPostTwo, testPost, testPost, testPost, testPost, testPost, testPost, testPost ];
+// put new posts at beginning of list
+const posts = [ eggGhost, spareThumb, windowCleaning, cinnabonChainlink, lostshoe ];
 export default posts;

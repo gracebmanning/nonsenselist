@@ -57,13 +57,19 @@
    width: 70%;
 }
 
+.postPreviewCategory{
+    padding: 3px;
+    color: white;
+    background-color: var(--accent-one);
+}
+
 .postPreviewInfo h4 {
     margin: 2px 2px 7px 2px;
     font-size: 18px;
 }
 
 .postPreviewInfo h5{
-    margin: 2px;
+    margin: 5px;
 }
 
 /** INDIVIDUAL POST PAGE **/
@@ -85,6 +91,14 @@
     height: fit-content;
     background-color: white;
     padding: 10px;
+}
+
+.postLocation{
+    margin: 0px;
+}
+
+.postByline{
+    margin: 0px 0px 20px 0px;
 }
 
 .post img{

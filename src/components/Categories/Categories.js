@@ -4,7 +4,8 @@ import posts from '../../posts/index.js';
 import { PostGrid } from '../Posts/Posts';
 import { formatTextForPath } from '../utility';
 
-// jobs, housing, for sale, items wanted, services, community service, gigs, résumés, and discussion forums
+// jobs, housing, for sale, items wanted, services, community service, gigs, 
+// lost & found, missed connections, résumés, and discussion forums
 
 const categories = [];
 posts.forEach((post) => {

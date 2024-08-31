@@ -10,27 +10,27 @@ import { formatTextForPath } from '../utility';
 
 // POST PAGE ELEMENT
 function Post(post){
-    if(post.image === "none"){
-        return(
-            <div className='postContainer'>
-                <div className='post'>
-                    <h3>{post.title}</h3>
-                    <h4>by {post.author} | {post.date}</h4>
-                    {post.body}
-                </div>
+    let displayImage = 'block';
+    if(post.image === 'none'){
+        displayImage = 'none';
+    }
+
+    let displayLocation = 'block';
+    if(post.location === 'none'){
+        displayLocation = 'none';
+    }
+    
+    return(
+        <div className='postContainer'>
+            <div className='post'>
+                <h3>{post.title}</h3>
+                <h4 className='postLocation' style={{display: displayLocation}}>{post.location}</h4>
+                <h4 className='postByline'>by {post.author} | {post.date}</h4>
+                {post.body}
+                <img style={{display: displayImage}} src={post.image} alt={post.imageAlt} />
             </div>
+        </div>
     )
-    } else{
-        return(
-            <div className='postContainer'>
-                <div className='post'>
-                    <h3>{post.title}</h3>
-                    <h4>by {post.author} | {post.date}</h4>
-                    {post.body}
-                    <img src={post.image} alt={post.imageAlt} />
-                </div>
-            </div>
-    )}
 }
 
 // POST PAGE ROUTES
@@ -38,30 +38,23 @@ export const postRoutes = posts.map((post, index) => <Route path={`post/${format
 
 // POST PREVIEWS
 export function PostPreview(post){
-    if(post.image === "none"){
-        return(
-            <a className='postPreview' key={post.title} href={`/post/${formatTextForPath(post.title)}`}>
-                <div className='postPreviewInfo'>
-                    <h4>{post.title}</h4>
-                    <h5>{post.date}</h5>
-                    <h5>by {post.author}</h5>
-                    {post.body.substring(0, 50)}...
-                </div>
-            </a>
-        )
-    } else{
-        return(
-            <a className='postPreview' key={post.title} href={`post/${formatTextForPath(post.title)}`}>
-                <div className='postPreviewInfo'>
-                    <h4>{post.title}</h4>
-                    <h5>{post.date}</h5>
-                    <h5>by {post.author}</h5>
-                    {post.body.substring(0, 50)}...
-                </div>
-                <img className='postPreviewImage' src={post.image} alt={post.imageAlt} />
-            </a>
-        )
+    let displayImage = 'block';
+    if(post.image === 'none'){
+        displayImage = 'none';
     }
+
+    return(
+        <a className='postPreview' key={post.title} href={`/post/${formatTextForPath(post.title)}`}>
+            <div className='postPreviewInfo'>
+                <h5 className='postPreviewCategory'>{post.category}</h5>
+                <h4>{post.title}</h4>
+                <h5>{post.date}</h5>
+                <h5>by {post.author}</h5>
+                {post.body.substring(0, 50)}...
+            </div>
+            <img className='postPreviewImage' style={{display: displayImage}} src={post.image} alt={post.imageAlt} />
+        </a>
+    )
 }
 
 // ALL POSTS GRID
