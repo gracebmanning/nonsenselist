@@ -1,0 +1,13 @@
+.uhOhContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 60px;
+}
+
+.uhOhTitle{
+    font-size: 30px;
+    color: white;
+}

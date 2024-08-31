@@ -7,6 +7,7 @@ import Categories from './components/Categories/Categories';
 import { categoryRoutes } from './components/Categories/Categories';
 import Contributors from './components/Contributors/Contributors';
 import { contributorRoutes } from './components/Contributors/Contributors';
+import PageDoesNotExist from './components/404/404';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/contributors' element={<Contributors/>} />
         {contributorRoutes}
         <Route path='/about' element={<About/>} />
+        <Route path='*' element={<PageDoesNotExist/>} />
       </Routes>
     </div>
   );
