@@ -2,10 +2,11 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
-import Contributors from './components/Contributors/Contributors';
 import AllPosts, { postRoutes } from './components/Posts/Posts';
 import Categories from './components/Categories/Categories';
 import { categoryRoutes } from './components/Categories/Categories';
+import Contributors from './components/Contributors/Contributors';
+import { contributorRoutes } from './components/Contributors/Contributors';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/category' element={<Categories/>} />
         {categoryRoutes}
         <Route path='/contributors' element={<Contributors/>} />
+        {contributorRoutes}
         <Route path='/about' element={<About/>} />
       </Routes>
     </div>
