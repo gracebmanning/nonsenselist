@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
+import { keywordRoutes } from './components/Search/Search';
 import About from './components/About/About';
 import AllPosts, { postRoutes } from './components/Posts/Posts';
 import Categories from './components/Categories/Categories';
@@ -15,6 +16,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>} />
+        {keywordRoutes}
         <Route path='/post' element={<AllPosts/>} />
         {postRoutes}
         <Route path='/category' element={<Categories/>} />

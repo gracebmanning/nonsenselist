@@ -1,7 +1,8 @@
 import './Home.css';
 import { useState } from 'react';
 import { HiSearch } from 'react-icons/hi';
-import { keywords } from '../../posts';
+import { keywords } from '../Search/Search';
+import { formatTextForPath } from '../utility';
 
 function getFilteredTopics(query){
     if(!query){
@@ -25,7 +26,7 @@ export default function Home(){
                 <ul className={(query === '') ? 'resultList' : 'resultList expanded'}>
                     {filteredTopics.map(value => 
                         <li key={value}>
-                            <a className='resultLink' href={`topic/${value}`}>{value}</a>
+                            <a className='resultLink' href={`search/${formatTextForPath(value)}`}>{value}</a>
                         </li>)}
                 </ul>
             </div>
