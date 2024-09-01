@@ -14,11 +14,11 @@
 }
 
 .contributorTiles{
-    width: 70%;
+    width: 100%;
     margin: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -32,8 +32,6 @@
     background-color: white;
     border-radius: 25px;
     margin: 20px;
-
-    
 }
 
 .contributorName{
@@ -65,4 +63,16 @@
 .contributorTile a:hover{
     transform: scale(1.05);
     transition: ease-in 0.2s;
+}
+
+@media only screen and (max-width: 1000px){
+    .contributorTile{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .contributorTile{
+        width: 90%;
+    }
 }

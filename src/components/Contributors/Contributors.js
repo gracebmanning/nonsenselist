@@ -25,7 +25,7 @@ export const contributorRoutes = contributors.map((contributor) => <Route path={
 
 function contributorTile(contributor){
     return(
-        <div className='contributorTile'>
+        <div className='contributorTile' key={contributor.name}>
             <h4 className='contributorName'>{contributor.name}</h4>
             <p className='contributorBio'>
                 {contributor.bio}

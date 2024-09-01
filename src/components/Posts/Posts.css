@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     
     margin: 10px 0px 10px 0px;
     padding-left: 10px;
@@ -107,6 +107,14 @@
     height: fit-content;
     background-color: white;
     padding: 10px;
+}
+
+.postCategory{
+    width: fit-content;
+    padding: 3px;
+    margin: 0px;
+    color: white;
+    background-color: var(--accent-one);
 }
 
 .postLocation{
