@@ -48,9 +48,9 @@ export function PostPreview(post){
             <div className='postPreviewInfo'>
                 <h5 className='postPreviewCategory'>{post.category}</h5>
                 <h4>{post.title}</h4>
-                <h5>{post.date}</h5>
-                <h5>by {post.author}</h5>
-                {post.body.substring(0, 50)}...
+                <h5 className='postPreviewDate'>{post.date}</h5>
+                <h5 className='postPreviewAuthor'>by {post.author}</h5>
+                <p className='postPreviewText'>{post.body.substring(0, 50)}...</p>
             </div>
             <img className='postPreviewImage' style={{display: displayImage}} src={post.image} alt={post.imageAlt} />
         </a>

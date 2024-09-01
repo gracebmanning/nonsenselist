@@ -15,27 +15,31 @@
 
 .postPreviewContainer{
     color: white;
-    width: 60%;
+    width: 70%;
     
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 50px;
 }
 
 .postPreview{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items: start;
     
-    margin: 10px;
+    margin: 10px 0px 10px 0px;
+    padding-left: 10px;
     border-radius: 10px;
     text-decoration: none;
     color: var(--accent-two);
     background-color: white;
 
-    width: 22%;
+    width: 80%;
     height: fit-content;
 
     transform: scale(1.0);
@@ -43,7 +47,7 @@
 }
 
 .postPreview:hover{
-    transform: scale(1.02);
+    transform: scale(1.01);
     transition: ease-in 0.2s;
 }
 
@@ -52,13 +56,17 @@
 }
 
 .postPreviewInfo{
-   text-align: center;
-   padding: 5px;
-   width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 5px;
 }
 
 .postPreviewCategory{
+    width: fit-content;
     padding: 3px;
+    margin: 10px 0px 10px 0px;
     color: white;
     background-color: var(--accent-one);
 }
@@ -68,8 +76,16 @@
     font-size: 18px;
 }
 
-.postPreviewInfo h5{
-    margin: 5px;
+.postPreviewDate{
+    margin: 0px 0px 5px 0px;
+}
+
+.postPreviewAuthor{
+    margin: 0px 0px 20px 0px;
+}
+
+.postPreviewText{
+    margin-top: 0px;
 }
 
 /** INDIVIDUAL POST PAGE **/
@@ -104,4 +120,24 @@
 .post img{
     width: 20%;
     margin: 10px;
+}
+
+@media only screen and (max-width: 1000px){
+    .postPreviewContainer{
+        width: 80%;
+    }
+
+    .postPreview{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .postPreviewContainer{
+        width: 100%;
+    }
+
+    .postPreview{
+        width: 90%;
+    }
 }
