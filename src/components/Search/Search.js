@@ -17,7 +17,6 @@ function getKeywords(){
 }
 
 let keywords = getKeywords();
-console.log(keywords);
 export {keywords};
 
 function keywordPage(keyword){

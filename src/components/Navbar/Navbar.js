@@ -1,19 +1,17 @@
 import './Navbar.css';
-import synonyms from './synonyms';
-
-function taglineWord(){
-    var word = synonyms[Math.floor(Math.random() * synonyms.length)];
-    return(word);
-}
+import { taglineWord } from '../../App';
+import { LuMenu } from "react-icons/lu";
+import { useState } from 'react';
 
 export default function Navbar(){
+    const [isNavExpanded, setIsNavExpanded] = useState(false)
     return(
-        <nav className='nav'>
+        <nav className={isNavExpanded ? "nav expanded" : "nav"}>
             <div className='navHeader'>
                 <h1 className='navTitle'><a href='/'>classifieds.lol</a></h1>
-                <h2 className='navTagline'>worldwide <p id='taglineWord'>{taglineWord()}</p> for those who need it</h2>
+                <h2 className='navTagline'>worldwide <p id='taglineWord'>{taglineWord}</p> for those who need it</h2>
             </div>
-            <ul className='navList'>
+            <ul className={isNavExpanded ? "navList expanded" : "navList"}>
                 <li>
                     <a className='navItem' href='/post'>
                         all posts
@@ -35,6 +33,9 @@ export default function Navbar(){
                     </a>
                 </li>
             </ul>
+            <button className="menuButton" onClick={() => {setIsNavExpanded(!isNavExpanded);}} >
+                <LuMenu className="menuIcon" />
+            </button>
         </nav>
     );
 }
