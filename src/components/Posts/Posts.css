@@ -157,6 +157,10 @@
     .postPreview{
         width: 90%;
     }
+
+    .post{
+        width: 70%;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -166,5 +170,9 @@
 
     .postPreview{
         width: 90%;
+    }
+
+    .post{
+        width: 80%;
     }
 }
