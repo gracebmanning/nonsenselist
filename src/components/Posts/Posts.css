@@ -111,10 +111,21 @@
 
 .postCategory{
     width: fit-content;
-    padding: 3px;
+    padding: 4px;
     margin: 0px;
     color: white;
     background-color: var(--accent-one);
+    transform: scale(1.0);
+    transition: ease-out 0.1s;
+}
+
+.postCategory:hover{
+    transform: scale(1.01);
+    transition: ease-in 0.1s;
+}
+
+.postCategory h5{
+    margin: 0px;
 }
 
 .postLocation{
@@ -123,6 +134,14 @@
 
 .postByline{
     margin: 0px 0px 20px 0px;
+}
+
+.postAuthorLink{
+    color: var(--accent-two);
+}
+
+.postAuthorLink:hover{
+    color: var(--accent-one);
 }
 
 .post img{

@@ -23,10 +23,14 @@ function Post(post){
     return(
         <div className='postContainer'>
             <div className='post'>
-                <h5 className='postCategory'>{post.category}</h5>
+                <a className='postCategory' href={`/category/${formatTextForPath(post.category)}`}>
+                    <h5>{post.category}</h5>
+                </a>
                 <h3>{post.title}</h3>
                 <h4 className='postLocation' style={{display: displayLocation}}>{post.location}</h4>
-                <h4 className='postByline'>by {post.author} | {post.date}</h4>
+                <h4 className='postByline'>
+                    by <a className='postAuthorLink' href={`/contributors/${post.author}`}>{post.author}</a> | {post.date}
+                </h4>
                 {post.body}
                 <img style={{display: displayImage}} src={post.image} alt={post.imageAlt} />
             </div>
