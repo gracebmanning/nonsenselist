@@ -8,6 +8,7 @@ function getKeywords(){
     let k = [];
     for(let post of posts){
         for(let word of post.keywords){
+            word = word.toLowerCase();
             if(!k.includes(word)){
                 k.push(word);
             }
@@ -20,7 +21,12 @@ let keywords = getKeywords();
 export {keywords};
 
 function keywordPage(keyword){
-    const filteredPosts = posts.filter((post) => post.keywords.includes(keyword));
+    const filteredPosts = posts.filter((post) => {
+        let lowerKeywords = [];
+        post.keywords.forEach(element => {
+            lowerKeywords.push(element.toLowerCase());
+        });
+        return lowerKeywords.includes(keyword)});
     return(
         PostGrid(`search results for: ${keyword}`, filteredPosts)
     );

@@ -1,11 +1,11 @@
-export const cinnabonChainlink = {
-    title: 'Cinnabon: chainlink bodysuit',
+export const cinnabonChainmail = {
+    title: 'Cinnabon: chainmail bodysuit',
     author: 'grace',
     date: 'september 17, 2023',
     location: 'Austin, TX',
     image: 'none',
     imageAlt: 'none',
-    keywords: ['Cinnabon', 'chainmail', 'Austin'],
+    keywords: ['Cinnabon', 'chainmail', 'Austin', 'Texas'],
     category: 'missed connections',
     body: 
     `

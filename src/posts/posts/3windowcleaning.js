@@ -9,6 +9,6 @@ export const windowCleaning = {
     category: 'services',
     body: 
     `
-    Window cleaning services needed. Only requirement is that you have to lick them.
+    Window cleaning services needed. Only requirement is that you have to lick them. Please call.
     `
 };
